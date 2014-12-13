@@ -1,0 +1,420 @@
+
+/*==================Common classes================*/
+
+h2 {
+  color:$fc-red;
+}
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-size:80px;
+  line-height:90px;
+  font-weight:700;
+  margin:0px;
+  padding-bottom:8px;
+}
+h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-size:36px;
+  line-height:38px;
+  padding-bottom:0px;
+  font-weight:300;
+  text-transform:uppercase;
+  margin:0px;
+}
+h3 {
+  font-family: 'Open Sans', sans-serif;
+  font-size:24px;
+  line-height:30px;
+  padding-bottom:6px;
+  font-weight:400;
+  margin:0px;
+}
+h4 {
+  font-family: 'Open Sans', sans-serif;
+  font-size:19px;
+  line-height:24px;
+  padding-bottom:6px;
+  font-weight:600;
+  margin:0px;
+}
+h5 {
+  font-family: 'Open Sans', sans-serif;
+  font-size:16px;
+  line-height:24px;
+  padding-bottom:6px;
+  font-weight:400;
+  margin:0px;
+}
+h4.subHeading {
+  font-weight:600;
+  font-size:18px;
+  padding-bottom:22px;
+}
+.heading {
+  text-align:center;
+  padding-bottom:45px;
+}
+.topmar {
+  margin-top:20px;
+}
+/*==============================Style for aboutme==============================*/
+
+.aboutme {
+  background: url('../../assets/images/bg-image.jpg') 100% 100% repeat;
+  color:$fc-darkGray;
+  position:relative;
+  .container {
+    padding-top:85px;
+    padding-bottom:93px;
+    .img-circle {
+      height: 294px;
+      width: 294px;
+    }
+    .profile-pic {
+      border: 5px solid #b1b2b4;
+      box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.2);
+      margin: 15px auto;
+      position: relative;
+      z-index: 2;
+    }
+    p {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 14px;
+      line-height: 21px;
+      font-weight: 400;
+      padding-bottom: 22px;
+      margin: 0px;
+    }
+    .bntDownload {
+      font-size:16px;
+      font-family: 'Open Sans', sans-serif;
+      font-weight:700;
+      background:#474d5d;
+      padding:16px 22px;
+      display:inline-block;
+      &:hover {
+        background:#373d4c;
+        color:#CCCCCC;
+        text-decoration:none;
+      }
+    }
+  }
+}
+/*==============================Style for Technical Skills==============================*/
+.technical {
+  background:#eeeeee;
+  color:#474d5d;
+  .container {
+    padding-top:85px;
+    padding-bottom:69px;
+    p {
+      color:#474d5d;
+    }
+    .heading {
+      p {
+        padding-bottom:41px;
+      }
+    }
+    .skillsArea {
+      padding:0px;
+    }
+    .skills {
+      margin:0 auto;
+      margin-bottom:23px;
+      text-align:center;
+      padding:0px;
+      float:none;
+      p {
+        color:#84868d;
+        font-size:13px;
+        line-height:18px;
+        text-align:center;
+      }
+      img {
+        margin:0 auto;
+        margin-bottom:33px;
+        width:100%;
+        max-width:152px;
+      }
+      h4 {
+        font-weight:700;
+        text-transform:uppercase;
+      }
+    }
+  }
+}
+.technical .skills
+.skilBg {
+  background:url(../../assets/images/skills.png) no-repeat 0 0;
+}
+.chart {
+  position: relative;
+  display: inline-block;
+  width: 152px;
+  height: 152px;
+  margin-bottom: 26px;
+  text-align: center;
+}
+.chart canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.percent {
+  display: inline-block;
+  font-size:21px;
+  color:#474d5d;
+  line-height: 152px;
+  z-index: 2;
+}
+.percent:after {
+  content: '%';
+  margin-left: 0.1em;
+  font-size: .8em;
+}
+.angular {
+  margin-top: 100px;
+}
+.angular .chart {
+  margin-top: 0;
+}
+
+/*==============================Style for Work Experience Style==============================*/
+
+
+.exprience {
+  background: url('../../assets/images/bg-image.jpg') 100% 100% repeat rgb(34, 34, 34);
+  .container {
+    padding-top:85px;
+    padding-bottom:90px;
+    p {
+      color:#84868d;
+      font-size:13px;
+      line-height:18px;
+    }
+    .heading {
+      p {
+        padding-bottom:41px;
+      }
+    }
+    h4 {
+      font-weight:700;
+    }
+    .workDetails {
+      .rightArea {
+        border-left: 1px solid #eaeaea;
+        padding-bottom:47px;
+        .arrowpart {
+          float:left;
+          width:15px;
+          height:50px;
+          background:url(../../assets/images/arrow-left.png) no-repeat 0 23px;
+        }
+        .exCon {
+          width:auto;
+          background:#f3f3f3;
+          border-bottom:solid 4px #eeeeee;
+          padding:22px 47px 6px 47px;
+          margin-left:15px;
+          text-align:left;
+          p {
+            color:#84868d;
+            line-height:21px;
+          }
+          h4 {
+            color:#474d5d;
+            padding-bottom:3px;
+          }
+          h5 {
+            color:#474d5d;
+          }
+      }
+      &:last-child {
+        .rightArea {
+          padding-bottom:0px;
+        }
+        }
+      }
+      .workYear {
+        font-size:17px;
+        color:#fff;
+        background:$fc-red;
+        text-align:center;
+        width:120px;
+        height:120px;
+        padding:40px 0 40px 0;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+/*==============================Style for Responsive Style==============================*/
+
+
+@media screen and (min-width: 1200px) {
+  .workYear {
+    width:140px;
+    height:140px;
+    padding-top:50px;
+  }
+  .education .workYear {
+    padding-top:58px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .navbar.navbar-inverse.navbar-static-top a {
+    padding-left:18px;
+    padding-right:18px;
+  }
+  .bannerText {
+    padding-left:25px;
+    padding-right:25px;
+  }
+  .bannerText h1 {
+    font-size:65px;
+    line-height:71px;
+  }
+  .bannerText h2 {
+    font-size:28px;
+  }
+  .proPic {
+    text-align:center;
+  }
+}
+@media screen and (max-width: 810px) {
+  body {
+    min-height:700px;
+  }
+  #header h3 {
+    font-size: 38px;
+  }
+  #header h3 span {
+    font-size: 16px;
+  }
+  .abc {
+    width:100%;
+  }
+  .navbar.navbar-inverse.navbar-static-top a {
+    padding-left: 17px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .conForm input.col-sm-6 {
+    width: 48.5%;
+  }
+  .conForm input.col-lg-6 {
+    width: 48.5%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .navbar-wrapper .container,  .navwrapper .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  ul.portfolioContainer li.col-xs-6 {
+    width:49%;
+    min-height: 85px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .navbar-header {
+    display:block;
+  }
+
+  .exprience {
+    .container {
+      .workDetails{
+        .rightArea {
+          border-left:none;
+          .arrowpart {
+            float:none;
+            width:100%;
+            height:40px;
+            background:url(../../assets/images/arrow-top.png) no-repeat 50% 100%;
+          }
+          .exCon {
+            margin-left:0px;
+          }
+        }
+        .workYear {
+          margin:0 auto;
+        }
+      }
+    }
+  }
+
+
+
+  ul.navbar-nav li a {
+    display:block;
+  }
+}
+@media screen and (max-width: 650px) {
+  #wrapper {
+    top: 200px !important;
+  }
+  .upbox {
+    transform: translate(0px, -70px);
+    -ms-transform: translate(0px, -70px);/* IE 9*/
+    -webkit-transform: translate(0px, -70px);/*Safari and Chrome*/
+  }
+  .bannerText {
+    top: 25%;
+    padding-top:15px;
+    padding-bottom:15px;
+  }
+  .bannerText h1 {
+    font-size: 42px;
+    line-height: 48px;
+  }
+  .bannerText h2 {
+    font-size: 18px;
+    line-height:24px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .navbar.navbar-inverse.navbar-static-top a {
+    line-height: 17px;
+    padding-top:11px;
+    padding-bottom:11px;
+  }
+}
+@media screen and (max-width: 400px) {
+  #loopedSlider, #newsSlider {
+    min-height: 650px;
+    height: 100%;
+  }
+  ul.slides {
+    min-height: 600px;
+    height: 100%;
+  }
+  .item {
+    width: 19%;
+  }
+  .item p {
+    font-size: 36px;
+  }
+  .aboutme img {
+    width:100%;
+  }
+  ul.portfolioContainer li.col-xs-6 {
+    width:100%;
+  }
+  .bntDownload {
+    font-size: 13px;
+    padding: 16px 14px;
+  }
+  .conForm textarea {
+    margin-bottom:20px;
+  }
+  .textGroup {
+    display:block;
+    padding:0 0 40px 0;
+  }
+  .nameError,  .emailError {
+    left:0px;
+    top:0px;
+  }
+}

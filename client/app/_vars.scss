@@ -1,0 +1,82 @@
+
+/*===============================FONT COLORS=================================*/
+$fc-red: #ff4454;
+$fc-darkGray:#222;
+$fc-darkGrayLine:#333;
+$fc-lightGray:#aaa;
+$fc-baseColor:#e4e7de;
+$fc-textColor:#1c1c1c;
+$fc-tan:#e5dccb;
+$faintBase:rgba(243,248,247,.4);
+$easeIn: cubic-bezier(0.825, 0.000, 1.000, 0.640);
+$easeInOut: cubic-bezier(0.665, 0.000, 0.430, 1);
+$easeOut: cubic-bezier(0.200, 0.470, 0.435, 0.970);
+$linear: cubic-bezier(0.250, 0.250, 0.750, 0.750);
+
+/*
+
+$lightGrayColor:rgba(33, 36, 39, .15);
+
+$veryFaintBase:rgba(243,248,247,.2);
+$overlayGray:rgba(100,100,100,.4);
+$darkGrayLine:#333;
+*/
+/*$logoN:url('../img/n.png');
+$logoIck:url('../img/ickJones.png');
+$logoN_big:url('../img/n_big.png');
+$logoIck_big:url('../img/ickJones_big.png');
+$logoN_retina:url('../img/n_retina.png');
+$logoIck_retina:url('../img/ickJones_retina.png');*//*
+
+
+
+
+$easeIn: cubic-bezier(0.825, 0.000, 1.000, 0.640);
+$easeInOut: cubic-bezier(0.665, 0.000, 0.430, 1);
+$easeOut: cubic-bezier(0.200, 0.470, 0.435, 0.970);
+$linear: cubic-bezier(0.250, 0.250, 0.750, 0.750);
+
+
+*/
+/*===============================FONT FAMILIES=================================*/
+
+$sans-serif:'alternate-gothic-no-2-d','AlternateGothic2 BT',Helvetica, Arial, sans-serif;
+$serif:'adobe-garamond-pro','Adobe Garamond',"Garamond",Times, serif;
+
+/*===============================FONT SIZES=================================*//*
+
+*/
+/*===============================FONT WEIGHT=================================*/
+
+
+$fw-light:100;
+$fw-regular:400;
+$fw-medium:600;
+$fw-bold:800;
+
+/*===============================IMAGES AND SPRITES=================================*/
+
+$iconSpritePath: "../images/glyphicons-halflings.png";
+$iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
+/*===============================CONTAINER BODY BACKGROUND=================================*/
+
+
+$bodyBackgroundPrimary: #a2afa8;/*$bgColor:#a2afa8;*/
+$bodyBackgroundSecondary: #d1dfe8;
+$bodyBackgroundSecondaryLight: #eef7fc;
+$bodyBackgroundTertiary:#F8FCFE;
+$bodyBackgroundLayoverLight: #FDF6F7;
+$destinationBackgroundPrimary:#B2E1F5;
+$searchResultSubContentBackground: #f8fcfe;
+
+/*===============================BORDERS=================================*/
+
+
+$borderPrimary: 1px solid #c1d5e0;
+$borderSecondary:1px solid #A5BDC9;
+$borderTertiary:1px solid #F3D4D5;
+$borderResultItem: 1px solid #D1E0E8;
+$borderError: 1px solid #ff0000;
+$borderWhite: 1px solid #fff;
+$borderSearchResultSubContent: 1px #d1dfe8 solid;
+

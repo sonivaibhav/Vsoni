@@ -1,0 +1,242 @@
+
+@import "_vars";
+/************************************
+  RESPONSIVE MIXINS
+*********************************/
+
+
+
+
+/********************************HELPER MIXINS*********************************/
+
+/*
+.border-radiuses ($topright, $bottomright, $bottomleft, $topleft) {
+  -webkit-border-top-right-radius:    $topright;
+  -webkit-border-bottom-right-radius: $bottomright;
+  -webkit-border-bottom-left-radius:  $bottomleft;
+  -webkit-border-top-left-radius:     $topleft;
+
+  -moz-border-radius-topright:        $topright;
+  -moz-border-radius-bottomright:     $bottomright;
+  -moz-border-radius-bottomleft:      $bottomleft;
+  -moz-border-radius-topleft:         $topleft;
+
+  border-top-right-radius:            $topright;
+  border-bottom-right-radius:         $bottomright;
+  border-bottom-left-radius:          $bottomleft;
+  border-top-left-radius:             $topleft;
+
+  -moz-background-clip:    padding;
+  -webkit-background-clip: padding-box;
+  background-clip:         padding-box;
+}
+
+
+.radial-gradient($inner-color: #555; $outer-color: #333) {
+
+  background-image: radial-gradient(circle, $inner-color, $outer-color);
+  background-repeat: no-repeat;
+
+  background: -moz-radial-gradient(center, ellipse cover, $inner-color 0%, $outer-color 0%, $inner-color 71%); */
+/* FF3.6+ *//*
+
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,$inner-color), color-stop(0%,$outer-color), color-stop(71%,$inner-color)); */
+/* Chrome,Safari4+ *//*
+
+  background: -webkit-radial-gradient(center, ellipse cover, $inner-color 0%,$outer-color 0%,$inner-color 71%); */
+/* Chlrome10+,Safari5.1+ *//*
+
+  background: -o-radial-gradient(center, ellipse cover, $inner-color 0%,$outer-color 0%,$inner-color 71%); */
+/* Opera 12+ *//*
+
+  background: -ms-radial-gradient(center, ellipse cover, $inner-color 0%,$outer-color 0%,$inner-color 71%); */
+/* IE10+ *//*
+
+  background: radial-gradient(ellipse at center, $inner-color 0%,$outer-color 0%,$inner-color 71%); */
+/* W3C *//*
+
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='$inner-color',GradientType=1 ); */
+/* IE6-9 fallback on horizontal gradient *//*
+
+}
+*/
+@mixin text-shadow ($string: 0 1px 3px rgba(0, 0, 0, 0.25)) {
+  -webkit-text-shadow: $string;
+  -moz-text-shadow:    $string;
+  -ms-text-shadow:    $string;
+  -o-text-shadow:    $string;
+  text-shadow:         $string;
+}
+@mixin box-shadow ($string) {
+  -webkit-box-shadow: $string;
+  -moz-box-shadow:    $string;
+  -ms-box-shadow:    $string;
+  -o-box-shadow:    $string;
+  box-shadow:         $string;
+}
+@mixin drop-shadow ($x, $y, $blur, $spread, $alpha) {
+  -webkit-box-shadow:	$x $y $blur $spread rgba(0, 0, 0, $alpha);
+  -moz-box-shadow:	$x $y $blur $spread rgba(0, 0, 0, $alpha);
+  box-shadow:		$x $y $blur $spread rgba(0, 0, 0, $alpha);
+}
+@mixin inner-shadow ($x, $y, $blur, $spread, $alpha) {
+  -webkit-box-shadow: inset $x $y $blur $spread rgba(0, 0, 0, $alpha);
+  -moz-box-shadow:    inset $x $y $blur $spread rgba(0, 0, 0, $alpha);
+  box-shadow:         inset $x $y $blur $spread rgba(0, 0, 0, $alpha);
+}
+@mixin backface-visibility ($backface-visibility){
+  -webkit-backface-visibility: $backface-visibility;
+  -moz-backface-visibility: $backface-visibility;
+  -ms-backface-visibility: $backface-visibility;
+  -o-backface-visibility: $backface-visibility;
+  backface-visibility: $backface-visibility;
+}
+
+@mixin box-sizing ($type) {
+  -webkit-box-sizing: $type;
+  -moz-box-sizing:    $type;
+  -o-box-sizing:    $type;
+  box-sizing:         $type;
+}
+
+@mixin border-radius ($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius:    $radius;
+  -o-border-radius:      $radius;
+  border-radius:         $radius;
+
+  //-moz-background-clip:    padding;
+  -webkit-background-clip: padding-box;
+  background-clip:         padding-box;
+}
+@mixin opacity ($opacity: 0.5) {
+  -webkit-opacity: 	$opacity;
+  -moz-opacity: 	$opacity;
+  -ms-opacity: 	$opacity;
+  -o-opacity: 	$opacity;
+  opacity: 		$opacity;
+}
+
+@mixin gradient ($startColor, $endColor) {
+  background-color: $startColor;
+  background: -webkit-gradient(linear, left top, left bottom, from($startColor), to($endColor));
+  background: -webkit-linear-gradient(top, $startColor, $endColor);
+  background: -moz-linear-gradient(top, $startColor, $endColor);
+  background: -ms-linear-gradient(top, $startColor, $endColor);
+  background: -o-linear-gradient(top, $startColor, $endColor);
+}
+@mixin horizontal-gradient ($startColor, $endColor) {
+  background-color: $startColor;
+  background-image: -webkit-gradient(linear, left top, right top, from($startColor), to($endColor));
+  background-image: -webkit-linear-gradient(left, $startColor, $endColor);
+  background-image: -moz-linear-gradient(left, $startColor, $endColor);
+  background-image: -ms-linear-gradient(left, $startColor, $endColor);
+  background-image: -o-linear-gradient(left, $startColor, $endColor);
+}
+@mixin animation ($name, $duration, $delay, $ease) {
+  -webkit-animation: $name $duration $delay $ease;
+  -moz-animation:    $name $duration $delay $ease;
+  -ms-animation:     $name $duration $delay $ease;
+}
+
+@mixin transition ($transition) {
+  -webkit-transition: $transition;
+  -moz-transition:    $transition;
+  -ms-transition:     $transition;
+  -o-transition:      $transition;
+}
+@mixin transition-ease ($props,$duration,$ease){
+  -webkit-transition: $props $duration $ease;
+  -moz-transition: $props $duration $ease;
+  -o-transition: $props $duration $ease;
+  -ms-transition: $props $duration $ease;
+  transition-transition: $props $duration $ease;
+}
+@mixin transition-box-shadow ($transition) {
+  -webkit-transition: box-shadow $transition;
+  -moz-transition:    box-shadow $transition;
+  -ms-transition:     box-shadow $transition;
+  -o-transition:      box-shadow $transition;
+}
+@mixin transition-transform($transition) {
+  -webkit-transition: -webkit-transform $transition;
+  -moz-transition: -moz-transform $transition;
+  -o-transition: -o-transform $transition;
+  transition: transform $transition;
+}
+@mixin transform($string){
+  -webkit-transform: $string;
+  -moz-transform: 	 $string;
+  -ms-transform: 	 $string;
+  -o-transform: 	 $string;
+}
+@mixin transform-origin ($x, $y) {
+  -webkit-transform-origin: $x $y;
+  -moz-transform-origin:    $x $y;
+  -ms-transform-origin:     $x $y;
+  -o-transform-origin:      $x $y;
+}
+@mixin transform-style ($style) {
+  -webkit-transform-style: $style;
+  -moz-transform-style:    $style;
+  -ms-transform-style:     $style;
+  -o-transform-style:      $style;
+}
+@mixin scale ($factor) {
+  -webkit-transform: scale($factor);
+  -moz-transform: 	 scale($factor);
+  -ms-transform: 	 scale($factor);
+  -o-transform: 	 scale($factor);
+}
+@mixin rotate ($deg) {
+  -webkit-transform: rotate($deg);
+  -moz-transform: 	 rotate($deg);
+  -ms-transform: 	 rotate($deg);
+  -o-transform: 	 rotate($deg);
+}
+@mixin skew ($deg, $deg2) {
+  -webkit-transform: skew($deg, $deg2);
+  -moz-transform: 	 skew($deg, $deg2);
+  -ms-transform: 	 skew($deg, $deg2);
+  -o-transform: 	 skew($deg, $deg2);
+}
+@mixin translate ($x, $y:0) {
+  -webkit-transform:       translate($x, $y);
+  -moz-transform: 	 translate($x, $y);
+  -ms-transform: 		 translate($x, $y);
+  -o-transform: 		 translate($x, $y);
+}
+@mixin translate3d ($x, $y, $z) {
+  -webkit-transform: translate3d($x, $y, $z);
+  -moz-transform: 	 translate3d($x, $y, $z);
+  -ms-transform: 	 translate3d($x, $y, $z);
+  -o-transform: 	 translate3d($x, $y, $z);
+}
+@mixin perspective ($value) {
+  -webkit-perspective: 	$value;
+  -moz-perspective: 	$value;
+  -ms-perspective: 	$value;
+  perspective: 		$value;
+}
+
+//FONT Mixin
+@mixin font-style($size, $height, $color, $weight, $family) {
+  font-size: $size;
+  line-height: $height;
+  color: $color;
+  font-weight: $weight;
+  font-family: $family;
+}
+@mixin serif($size,$leading){
+  font-family: $serif;
+  font-size:$size;
+  line-height:$leading;
+  -moz-font-feature-settings: 'liga' 1; /* moz prefix - edit font-feature-settings property */
+  -ms-font-feature-settings: 'liga' 1; /* ms prefix - edit font-feature-settings property */
+  -webkit-font-feature-settings: 'liga' 1; /* webkit prefix - edit font-feature-settings property */
+  -o-font-feature-settings: 'liga' 1; /* o prefix - edit font-feature-settings property */
+  font-feature-settings: 'liga' 1;
+  letter-spacing: 0em;
+  font-weight:normal;
+  -webkit-font-smoothing:antialiased;
+}

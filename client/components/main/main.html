@@ -1,0 +1,116 @@
+<!--<div ng-include="'components/navbar/navbar.html'"></div>-->
+
+<header class="hero-unit" id="banner">
+  <div class="container">
+    <h1>'Allo, 'Allo!</h1>
+    <p class="lead">Kick-start your next web app with Angular Fullstack</p>
+    <img src="assets/images/yeoman.png" alt="I'm Yeoman">
+  </div>
+</header>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <h1 class="page-header">Features:</h1>
+      <ul class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-repeat="thing in awesomeThings">
+        <li><a href="#" tooltip="{{thing.info}}">{{thing.name}}</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<section class="main-container">
+    <div class="container" style="margin-top: 4%;">
+        <section class="main-content col-md-12 col-sm-12 col-xs-12">
+            <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+            <![endif]-->
+
+            <div class="col-md-6 col-sm-6 col-xs-12 circularImage">
+                <div class="image-wrapper center-block">
+                    <!--<img src="../images/vaibhav.jpg" class="img-circle" alt="Vaibhav Circular Image"><br>-->
+                    <div class="myName">
+                        <span class="v-img">Vaibhav</span><span class="aibhav-soni-img">Soni</span>
+                    </div>
+                </div>
+
+                <!--            <section class="color-1">
+                                <nav class="cl-effect-20">
+                                    <a href="#"><span data-hover="Beleaguer">Beleaguer</span></a>
+                                    <a href="#"><span data-hover="Scintilla">Scintilla</span></a>
+                                    <a href="#"><span data-hover="Chatoyant">Chatoyant</span></a>
+                                    <a href="#"><span data-hover="Palimpsest">Palimpsest</span></a>
+                                    <a href="#"><span data-hover="Languor">Languor</span></a>
+                                </nav>
+                            </section>-->
+            </div>
+            <div class="design-build col-md-6 col-sm-6 col-xs-12">
+                <div class="web-designer">WEB DESIGNER</div>
+                <div class="and">and</div>
+                <div class="ui-developer">FRONT-END DEVELOPER</div>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                <p class="intro-text">I’m a front end developer from New Jersey who focuses on writing clean, elegant and efficient code. I have a passion for pixel perfect, minimal and easy to use interfaces. Love HTML5, CSS3, <span class="angularJs">AngularJS</span>  and a <span class="bootstrap">Bootstrap.</span></p>
+            </div>
+            <div class="main clearfix col-md-12 col-sm-12 col-xs-12">
+                <div class="circle">
+                    <h1>RECENT WORK</h1>
+                </div>
+            </div>
+            <!--<div class="col-xs-12 col-md-12">
+                <div id="instructions" style="height: 300px; width: 300px; margin-left: -146.605504587156px; margin-bottom: 50px; opacity: 1;">
+                    <div id="work" style="font-size: 1em;margin-top: 50%;">SO FAR</div>
+                    <div id="down-arrows">
+                        <svg id="down-arrow2" x="0px" y="0px">
+                            <polygon points="5,0 5,41 0,41 7,50 14,41 9,41 9,0 "></polygon>
+                        </svg>
+                        <svg id="down-arrow" x="0px" y="0px" style="top: 47%;">
+                            <polygon points="5,0 5,41 0,41 7,50 14,41 9,41 9,0 "></polygon>
+                        </svg>
+                    </div>
+                </div>
+            </div>-->
+        </section>
+    </div>
+
+</section>
+
+
+</div>
+</section>
+
+
+<section ng-controller="MainCtrl">
+    <section>
+        <div id="stage" style="padding-left: 180px; height: 160px;">
+            <div id="spinner" style="-webkit-transform-origin: 180px 0 0;">
+                <img style="-webkit-transform: rotateY(0deg) translateX(165px); padding: 0px 20px;" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRQGSS4mQZ2dn_qls5tVoXOvCHFbfsj1RCeG8VkGZ-wovNr8nPH" width="200" height="160" alt="">
+                <img style="-webkit-transform: rotateY(72deg) translateX(165px); padding: 0px 13px;" src="http://www.24tanzania.net/media/2014/10/Grozny-300x185.jpg" width="213" height="160" alt="">
+                <img style="-webkit-transform: rotateY(144deg) translateX(165px); padding: 0px 0px;" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRQGSS4mQZ2dn_qls5tVoXOvCHFbfsj1RCeG8VkGZ-wovNr8nPH" width="240" height="160" alt="">
+                <img style="-webkit-transform: rotateY(216deg) translateX(165px); padding: 0px 13px;" src="http://mpic.haiwainet.cn/index.php/thumb/d/NMediaFile/2014/1004/LOCAL201410040813163916319396076.jpg" width="213" height="160" alt="">
+                <img style="-webkit-transform: rotateY(288deg) translateX(165px); padding: 0 1px;" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRQGSS4mQZ2dn_qls5tVoXOvCHFbfsj1RCeG8VkGZ-wovNr8nPH" width="238" height="160" alt="">
+            </div>
+        </div>
+    </section>
+    <!--<div class="stage" style="width: 240px; height: 160px;">
+        <div class="spinner">
+            <img style="-webkit-transform: rotateY(0deg) translateZ(165px); -moz-transform: rotateY(0deg) translateZ(165px); -ms-transform: rotateY(0deg) translateZ(165px); padding: 0px 20px;" src="http://www.24tanzania.net/media/2014/10/Grozny-300x185.jpg" width="200" height="160" alt="">
+            <img style="-webkit-transform: rotateY(72deg) translateZ(165px); -moz-transform: rotateY(72deg) translateZ(165px); -ms-transform: rotateY(72deg) translateZ(165px); padding: 0px 13px;" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRQGSS4mQZ2dn_qls5tVoXOvCHFbfsj1RCeG8VkGZ-wovNr8nPH" width="213" height="160" alt="">
+            <img style="-webkit-transform: rotateY(144deg) translateZ(165px); -moz-transform: rotateY(144deg) translateZ(165px); -ms-transform: rotateY(144deg) translateZ(165px); padding: 0px 0px;" src="http://www.24tanzania.net/media/2014/10/Grozny-300x185.jpg" width="240" height="160" alt="">
+            <img style="-webkit-transform: rotateY(216deg) translateZ(165px); -moz-transform: rotateY(216deg) translateZ(165px); -ms-transform: rotateY(216deg) translateZ(165px); padding: 0px 13px;" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRQGSS4mQZ2dn_qls5tVoXOvCHFbfsj1RCeG8VkGZ-wovNr8nPH" width="213" height="160" alt="">
+            <img style="-webkit-transform: rotateY(288deg) translateZ(165px); -moz-transform: rotateY(288deg) translateZ(165px); -ms-transform: rotateY(288deg) translateZ(165px); padding: 0px 1px;" src="http://www.24tanzania.net/media/2014/10/Grozny-300x185.jpg" width="238" height="160" alt="">
+        </div>
+    </div>-->
+</section>
+
+
+
+
+<footer class="footer">
+  <div class="container">
+      <p>Angular Fullstack v2.0.13 |
+        <a href="https://twitter.com/tyhenkel">@tyhenkel</a> |
+         <a href="https://github.com/DaftMonk/generator-angular-fullstack/issues?state=open">Issues</a></p>
+  </div>
+</footer>

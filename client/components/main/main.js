@@ -1,3 +1,4 @@
+/*
 'use strict';
 
 angular.module('vsoniAppApp')
@@ -8,4 +9,4 @@ angular.module('vsoniAppApp')
         templateUrl: 'app/main/main.html',
         controller: 'MainCtrl'
       });
-  });
+  });*/

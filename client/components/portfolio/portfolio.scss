@@ -1,0 +1,133 @@
+
+
+/*************************************
+styles for image flip directive start
+**************************************/
+$card-width: 260px;
+$card-height: 400px;
+$flip-duration: 0.4s;
+
+/*************************************
+Build the scene and rotate on hover
+**************************************/
+.csstransforms3d {
+  .list-wrapper {
+    list-style: none;
+    padding: 0;
+  }
+  .portfolio-item {
+    float: left;
+    height: $card-height;
+    margin: 30px;
+    width: $card-width;
+    @include perspective (1000px);
+  }
+  .item-wrap {
+    width: $card-width;
+    height: $card-height;
+    float: left;
+    margin: 0 10px 10px 0;
+    font-size: .8em;
+    cursor: pointer;
+    @include transform-style (preserve-3d);
+    @include transform (translateZ(-130px));
+    @include transition-transform (350ms);
+
+    /*************************************
+    Shadow beneath the 3D object
+    **************************************/
+    &::after {
+      content: '';
+      width: 260px;
+      height: 260px;
+      position: absolute;
+      bottom: 0;
+      @include box-shadow (0 30px 50px rgba(0,0,0,0.3));
+      @include transform-origin(100%, 100%);
+      @include transform(rotateX(90deg) translateY(130px));
+      @include transition-box-shadow(350ms);
+    }
+    /*************************************
+    Transform and style the two planes
+    **************************************/
+    .front-image {
+      position: absolute;
+      width: $card-width;
+      height: $card-height;
+      background-color: #fff;
+      background-image: url(../../assets/images/poster01.jpg);
+      @include backface-visibility(hidden);
+      @include transform(translateZ(130px));
+      background-size: cover;
+      background-repeat: no-repeat;
+      @include transition-box-shadow(350ms);
+      @include box-shadow (inset 0px 0px 40px rgba(255,255,255,0));
+    }
+    .back-image {
+      position: absolute;
+      width: $card-width;
+      height: $card-height;
+      background-color: #fff;
+      background-image: url(../../assets/images/still01.jpg);
+      @include backface-visibility(hidden);
+      @include transform(rotateY(90deg) translateZ(130px));
+      border: 1px solid #B8B5B5;
+      font-size: 0.75em;
+      @include transition-box-shadow(350ms);
+      @include box-shadow (inset -300px 0px 40px rgba(0,0,0,0.5));
+    }
+  }
+  .item-wrap:hover {
+    @include transform (rotateY(-78deg) translateZ(20px));
+    .front-image {
+      @include box-shadow(inset 300px 0px 40px rgba(255,255,255,0.8));
+    }
+    .back-image {
+      @include box-shadow(inset 0px 0px 40px rgba(0,0,0,0));
+    }
+    &::after {
+      @include box-shadow(20px -5px 50px rgba(0,0,0,0.3));
+    }
+  }
+}
+/*************************************
+Web-site information
+**************************************/
+
+/*.back-image header {
+    color: #FFF;
+    padding: 7px 10px;
+    font-weight: bold;
+    height: 195px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-shadow: 0px 1px 1px rgba(0,0,0,1);
+}
+
+.back-image header h1 {
+    margin: 0 0 2px;
+    font-size: 1.4em;
+}
+
+.back-image header .rating {
+    border: 1px solid #FFF;
+    padding: 0px 3px;
+}
+
+.back-image p {
+    padding: 1.2em 1.4em;
+    margin: 2px 0 0;
+    font-weight: 700;
+    color: #666;
+    line-height: 1.4em;
+    border-top: 10px solid #555;
+}*/
+/*************************************
+Media Queries
+**************************************/
+@media screen and (max-width: 60.75em){
+  .scene {
+    float: none;
+    margin: 30px auto 60px;
+  }
+}
