@@ -17,17 +17,48 @@
     <!-- endbuild -->
     <!-- build:css({.tmp,client}) app/app.css -->
     <link rel="stylesheet" href="app/app.css">
+      <link rel="stylesheet" href="css/component.css">
+      <link rel="stylesheet" href="css/demo.css">
+      <link rel="stylesheet" href="css/normalize.css">
       <!-- injector:css -->
       <!-- endinjector -->
     <!-- endbuild -->
+      <script src="js/modernizr.custom.js"></script>
   </head>
   <body ng-app="vsoniAppApp">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <div ng-include="'components/navbar/navbar.html'"></div>
+
     <!-- Add your site or application content here -->
-    <div ui-view=""></div>
+    <div id="st-container" class="st-container">
+        <div id="st-trigger-effects" class="" style="position: absolute;z-index: 100;">
+            <button data-effect="st-effect-11">Scale &amp; rotate pusher</button>
+        </div>
+
+        <!--<div ng-include="'components/navbar/navbar.html'"></div>-->
+        <nav class="st-menu st-effect-11" id="menu-11">
+            <h2 class="icon icon-lab">Sidebar</h2>
+            <ul>
+                <li><a class="icon icon-data" ui-sref="main">home</a></li>
+                <li><a class="icon icon-location" ui-sref="about">About</a></li>
+                <li><a class="icon icon-study" ui-sref="portfolio">Portfolio</a></li>
+                <li><a class="icon icon-photo" ui-sref="contact">Contact</a></li>
+                <li><a class="icon icon-wallet" ui-sref="about-me">about-me</a></li>
+            </ul>
+        </nav>
+        <div class="vr" id="line1"></div>
+        <div class="st-pusher">
+            <div class="st-content"><!-- this is the wrapper for the content -->
+                <div class="st-content-inner"><!-- extra div for emulating position:fixed of the menu -->
+                    <!-- Top Navigation -->
+                    <div ui-view=""></div>
+                    <!-- /main -->
+                </div><!-- /st-content-inner -->
+            </div><!-- /st-content -->
+        </div><!-- /st-pusher -->
+    </div><!-- /st-container -->
+    <!--<div ui-view=""></div>-->
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
     <script>
@@ -65,6 +96,8 @@
           <script src="components/modal/modal.service.js"></script>
           <script src="components/navbar/navbar.controller.js"></script>
           <!-- endinjector -->
+    <script src="js/classie.js"></script>
+    <script src="js/sidebarEffects.js"></script>
         <!-- endbuild -->
 </body>
 </html>
