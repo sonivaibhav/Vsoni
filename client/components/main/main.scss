@@ -66,7 +66,7 @@ body {
   margin: 0;
   font-size: 13px;
   line-height: 1.231;
-  /*background: url('../images/bg-image.jpg') 100% 100% repeat rgb(34, 34, 34);*/
+  /*background: url('../../assets/images/bg-image.jpg') 100% 100% repeat rgb(34, 34, 34);*/
   background: 100% 100% no-repeat $fc-darkGray;
 }
 
@@ -87,8 +87,8 @@ body {
   background: url('../../assets/images/bg-image.jpg') 100% 100% repeat;
 }
 .main-container {
-  /*background: url('../images/bg-image.jpg') 100% 100% repeat;*/
-  /*background: transparent;*/
+  background: url('../../assets/images/bg-image.jpg') 100% 100% repeat;
+  background: transparent;
 }
 .web-designer {
   text-shadow: rgb(220, 189, 182) 1px 0px 2px, rgb(176, 49, 57) 1px 1px 2px, rgb(220, 189, 182) 2px 1px 2px, rgb(176, 49, 57) 2px 2px 2px, rgba(33, 36, 39, 0.109804) 4px 0px 3px, rgba(33, 36, 39, 0.0980392) 3px 1px 3px, rgba(33, 36, 39, 0.0941176) 2px 2px 3px, rgba(33, 36, 39, 0.0823529) 1px 3px 3px, rgba(33, 36, 39, 0.0784314) 0px 4px 3px, rgba(33, 36, 39, 0.0745098) -1px 5px 3px, rgba(33, 36, 39, 0.0666667) -2px 6px 3px, rgba(33, 36, 39, 0.0627451) -3px 7px 3px, rgba(33, 36, 39, 0.0588235) -4px 8px 3px, rgba(33, 36, 39, 0.054902) -5px 9px 3px, rgba(33, 36, 39, 0.0470588) -6px 10px 3px, rgba(33, 36, 39, 0.0431373) -7px 11px 3px, rgba(33, 36, 39, 0.0392157) -8px 12px 3px, rgba(33, 36, 39, 0.0313726) -9px 13px 3px, rgba(33, 36, 39, 0.027451) -10px 14px 3px, rgba(33, 36, 39, 0.0235294) -11px 15px 3px;
