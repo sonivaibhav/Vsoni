@@ -35,17 +35,8 @@
             <button data-effect="st-effect-11"><span class="glyphicon glyphicon-list">Menu</span></button>
         </div>
 
-        <!--<div ng-include="'components/navbar/navbar.html'"></div>-->
-        <nav class="st-menu st-effect-11" id="menu-11">
-            <h2 class="icon icon-lab">Sidebar</h2>
-            <ul>
-                <li><a class="icon icon-data" ui-sref="main">home</a></li>
-                <li><a class="icon icon-location" ui-sref="about">About</a></li>
-                <li><a class="icon icon-study" ui-sref="portfolio">Portfolio</a></li>
-                <li><a class="icon icon-photo" ui-sref="contact">Contact</a></li>
-                <li><a class="icon icon-wallet" ui-sref="about-me">about-me</a></li>
-            </ul>
-        </nav>
+
+        <nav class="st-menu st-effect-11" id="menu-11" ng-include="'components/navbar/navbar.html'"></nav>
         <div class="vr" id="line1"></div>
         <div class="st-pusher">
             <div class="st-content"><!-- this is the wrapper for the content -->

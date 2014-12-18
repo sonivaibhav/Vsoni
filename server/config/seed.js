@@ -6,6 +6,7 @@
 'use strict';
 
 var Thing = require('../api/thing/thing.model');
+var MainData = require('../api/main/main.model');
 
 
 Thing.find({}).remove(function() {

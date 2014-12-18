@@ -1,24 +1,7 @@
 
-<div class="navbar navbar-default navbar-static-top" ng-controller="NavbarCtrl">
-  <div class="container">
-    <div class="navbar-header">
-      <button class="navbar-toggle" type="button" ng-click="isCollapsed = !isCollapsed">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a href="/" class="navbar-brand">vsoni-app</a>
-    </div>
-    <div collapse="isCollapsed" class="navbar-collapse collapse" id="navbar-main">
-        <nav class="st-menu st-effect-11" id="menu-11">
-          <ul class="nav navbar-nav">
-            <li ng-repeat="item in menu" ng-class="{active: isActive(item.link)}">
-                <a ng-href="{{item.link}}">{{item.title}}</a>
-            </li>
-          </ul>
-        </nav>
-    </div>
-  </div>
-</div>
-
+<h2 class="menu-title">Sidebar</h2>
+<ul ng-controller="NavbarCtrl">
+    <li ng-repeat="item in menu" ng-class="{active: isActive(item.link)}">
+        <a ng-href="{{item.link}}">{{item.title}}</a>
+    </li>
+</ul>
